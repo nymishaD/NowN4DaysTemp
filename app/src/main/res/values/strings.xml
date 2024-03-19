@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">NowN4DaysTemp</string>
+    <string name="retry">RETRY</string>
+    <string name="location_permission_required">Location Permission Required</string>
+    <string name="something_went_wrong">Something went wrong</string>
+</resources>

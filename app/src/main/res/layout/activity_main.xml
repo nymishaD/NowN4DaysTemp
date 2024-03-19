@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/yellow"
     android:orientation="vertical"
-    android:background="@color/white"
     tools:context=".MainActivity">
 
     <TextView
@@ -12,13 +12,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="@dimen/dimen_56dp"
         android:fontFamily="@font/roboto_black"
-        android:padding="16dp"
-        android:lineSpacingExtra="112sp"
+        android:lineSpacingExtra="@dimen/dimen_112sp"
         android:lineSpacingMultiplier="1.2"
-        android:textColor="#2A2A2A"
-        android:textSize="96sp" />
+        android:padding="@dimen/dimen_16dp"
+        android:textColor="@color/nero"
+        android:textSize="@dimen/dimen_96sp" />
 
     <TextView
         android:id="@+id/cityName"
@@ -27,9 +27,9 @@
         android:layout_below="@id/today_temp"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/roboto_thin"
-        android:paddingBottom="76dp"
-        android:textColor="#556799"
-        android:textSize="36sp" />
+        android:paddingBottom="@dimen/dimen_76dp"
+        android:textColor="@color/san_marino"
+        android:textSize="@dimen/dimen_36sp" />
 
     <include
         android:id="@+id/LayoutDay1"
@@ -40,10 +40,10 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="@dimen/dimen_1dp"
         android:layout_above="@id/LayoutDay2"
-        android:layout_marginHorizontal="16dp"
-        android:background="#dadada" />
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:background="@color/grey" />
 
     <include
         android:id="@+id/LayoutDay2"
@@ -54,10 +54,10 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="@dimen/dimen_1dp"
         android:layout_above="@id/LayoutDay3"
-        android:layout_marginHorizontal="16dp"
-        android:background="#dadada" />
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:background="@color/grey" />
 
     <include
         android:id="@+id/LayoutDay3"
@@ -68,10 +68,10 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="@dimen/dimen_1dp"
         android:layout_above="@id/LayoutDay4"
-        android:layout_marginHorizontal="16dp"
-        android:background="#dadada" />
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:background="@color/grey" />
 
     <include
         android:id="@+id/LayoutDay4"

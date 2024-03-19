@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#F5F657</color>
+    <color name="nero">#2A2A2A</color>
+    <color name="san_marino">#556799</color>
+    <color name="grey">#dadada</color>
 </resources>

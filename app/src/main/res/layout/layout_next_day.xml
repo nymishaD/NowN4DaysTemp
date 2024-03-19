@@ -2,19 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingHorizontal="16dp"
-    android:paddingVertical="40dp">
+    android:paddingHorizontal="@dimen/dimen_16dp"
+    android:paddingVertical="@dimen/dimen_40dp">
 
     <TextView
         android:id="@+id/day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_regular"
-        android:textSize="16sp" />
+        android:textColor="@color/nero"
+        android:textSize="@dimen/dimen_16sp" />
 
     <View
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/dimen_0dp"
         android:layout_weight="1" />
 
     <TextView
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:fontFamily="@font/roboto_regular"
-        android:textSize="16sp" />
+        android:textColor="@color/nero"
+        android:textSize="@dimen/dimen_16sp" />
 
 </LinearLayout>

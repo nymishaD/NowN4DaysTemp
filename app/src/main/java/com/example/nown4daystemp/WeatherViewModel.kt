@@ -30,6 +30,10 @@ class WeatherViewModel @Inject constructor(
     val averageTemperatures: LiveData<Map<String, Int>>
         get() = _nextDayForecast
 
+    private val _isLoading = MutableLiveData<Boolean>()
+    val isLoading: LiveData<Boolean>
+        get() = _isLoading
+
 
     fun fetchWeatherResults(cityName: String) {
         fetchWeather(cityName)
@@ -39,6 +43,7 @@ class WeatherViewModel @Inject constructor(
     private fun fetchWeather(cityName: String) {
         viewModelScope.launch {
             try {
+                _isLoading.value = true
                 val currentWeather = repository.getCurrentWeather(cityName, appId)
                 val temperatureInCelsius = (currentWeather.main.temp - 273.15).toInt()
                 _currentWeather.value = mapOf(
@@ -46,6 +51,8 @@ class WeatherViewModel @Inject constructor(
                 )
             } catch (e: Exception) {
                 _errorOccurred.value = true
+            } finally {
+                _isLoading.value = false
             }
         }
     }
@@ -53,10 +60,13 @@ class WeatherViewModel @Inject constructor(
     private fun fetchNextDaysForecast(cityName: String) {
         viewModelScope.launch {
             try {
+                _isLoading.value = true
                 val nextDaysForecast = repository.getNextDaysForecast(cityName, appId)
                 _nextDayForecast.value = calculateAverageTemperatures(nextDaysForecast)
             } catch (e: Exception) {
                 _errorOccurred.value = true
+            } finally {
+                _isLoading.value = false
             }
         }
     }

@@ -7,6 +7,13 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
     <TextView
         android:id="@+id/today_temp"
         android:layout_width="wrap_content"

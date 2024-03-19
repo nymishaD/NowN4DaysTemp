@@ -69,6 +69,22 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
+        viewModel.isLoading.observe(this) { isLoading ->
+            if(isLoading) {
+                showProgressBar()
+            } else {
+                hideProgressBar()
+            }
+        }
+    }
+
+    private fun showProgressBar() {
+        binding.progressBar.visibility = View.VISIBLE
+    }
+
+    private fun hideProgressBar() {
+        binding.progressBar.visibility = View.GONE
     }
 
     private fun showSnackBarWithButton(view: View, message: String, buttonText: String, buttonClickListener: View.OnClickListener) {
